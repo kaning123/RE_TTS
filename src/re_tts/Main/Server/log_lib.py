@@ -2,8 +2,8 @@ import logging
 import logging.handlers
 import os
 
-import file_lib
-import time_lib
+from . import file_lib
+from . import time_lib
 
 MY_LOG_DIR = file_lib.merge_dir_txt2(file_lib.get_my_dir(), "Log")
 DEFAULT_THEME = logging.Formatter(f'[%(asctime)s][%(name)s/%(levelname)s][Func:%(funcName)s][%(filename)s:%(lineno)d] : %(message)s',datefmt='%Y-%m-%d/%H:%M:%S')

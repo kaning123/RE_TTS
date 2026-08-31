@@ -18,7 +18,7 @@ logger_ = logging.getLogger(__name__)
 
 import os
 from pathlib import Path
-import file_lib as fl
+from . import file_lib as fl
 import json
 import time
 import shutil

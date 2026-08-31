@@ -1,6 +1,6 @@
 import sys
 import os
-import file_lib as fl
+from . import file_lib as fl
 import subprocess
 from pathlib import Path
 import json
