@@ -1,6 +1,6 @@
 import logging
 import logging.handlers
-
+import os, shutil
 from . import file__lib as file_lib
 from . import time_lib
 DEFAULT_THEME = logging.Formatter(f'[%(asctime)s][%(name)s/%(levelname)s][Func:%(funcName)s][%(filename)s:%(lineno)d] : %(message)s',datefmt='%Y-%m-%d/%H:%M:%S')
@@ -24,6 +24,8 @@ class LogStream:
     def __init__(self, logger_name,dir_path,LVL=DEBUG,file_name=f'log.log',theme = DEFAULT_THEME,c_display=True,f_display=False):
         
         file_name = f'logger_[{logger_name}][{time_lib.get_time_full()}]_{file_name}'
+        if not os.path.exists(dir_path):
+            file_lib.create_dir(dir_path)
         filepath = file_lib.merge_dir_txt(dir_path,file_name)
 
         logger_name = get_unique_name(logger_name)
