@@ -1,6 +1,6 @@
 [project]
 name = "re-tts"
-version = "0.1.2_Alpha20260831"
+version = "0.1.3_Alpha20260831"
 description = "A Simple TTS tool based on RVC 2.2.231006 and edge-tts"
 readme = "README.md"
 authors = [

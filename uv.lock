@@ -43,7 +43,7 @@ wheels = [
 
 [[package]]
 name = "re-tts"
-version = "0.1.2a20260831"
+version = "0.1.3a20260831"
 source = { editable = "." }
 dependencies = [
     { name = "rich" },
