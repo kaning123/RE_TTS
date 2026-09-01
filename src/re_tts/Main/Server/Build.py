@@ -37,7 +37,7 @@ import sys
 sys.path.append(ROOT_DIR)
 try:
     import Build_.build as build
-    from . import log_lib as log_lib
+    from . import log_lib
 except:
     traceback.print_exc()
 finally:

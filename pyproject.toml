@@ -1,6 +1,6 @@
 [project]
 name = "re-tts"
-version = "0.1.4_Alpha20260901"
+version = "0.2.5_Alpha20260901"
 description = "A Simple TTS tool based on RVC 2.2.231006 and edge-tts"
 readme = "README.md"
 authors = [
@@ -8,8 +8,11 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "click>=8.5.0",
+    "requests>=2.34.2",
     "rich>=15.0.0",
     "rpyc>=6.0.2",
+    "tqdm>=4.70.0",
 ]
 
 [project.scripts]
