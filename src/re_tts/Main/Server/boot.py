@@ -46,6 +46,22 @@ def boot():
         "--noautoopen",]
     subprocess.run(cmd)
 
+def boot_webui():
+    try:
+        console.print("[bold cyan]MadArtist Server Boot Script[/bold cyan] - Version [red]Alpha_0.0.1_202606[/red]")
+        cmd = ["cmd", "/c", f'{str(RVC_RUNTIME)}', 
+            f'{str(fl.merge_dir_txt(RVC_ROOT, "infer-web.py"))}',
+            "--pycmd",
+            f"{str(RVC_RUNTIME)}",
+            "--port",
+            "7897",
+            "--noautoopen",]
+        subprocess.run(cmd)
+    except KeyboardInterrupt:
+        console.print("[bold green]Exiting...[/bold green] - [bold cyan]MadArtist Server Boot Script[/bold cyan]")
+        sys.exit(0)
+
+
 if __name__ == "__main__":
     try:
 

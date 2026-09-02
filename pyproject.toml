@@ -1,6 +1,6 @@
 [project]
 name = "re-tts"
-version = "0.2.5_Alpha20260901"
+version = "0.3.6_Alpha20260902"
 description = "A Simple TTS tool based on RVC 2.2.231006 and edge-tts"
 readme = "README.md"
 authors = [
@@ -9,6 +9,8 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "click>=8.5.0",
+    "edge-tts>=7.2.8",
+    "langdetect>=1.0.9",
     "requests>=2.34.2",
     "rich>=15.0.0",
     "rpyc>=6.0.2",
@@ -17,7 +19,7 @@ dependencies = [
 
 [project.scripts]
 re-tts = "re_tts:main"
-
+rvc-webui-boot = "re_tts:boot_webui"
 [build-system]
 requires = ["uv_build>=0.11.32,<0.12.0"]
 build-backend = "uv_build"
